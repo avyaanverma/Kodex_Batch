@@ -1,0 +1,24 @@
+.A{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+    position: relative;
+    z-index: 1;
+}
+
+.A-child{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    z-index:99;
+}
+
+.B{
+    height: 150px;
+    width: 150px;
+    background-color: lightgreen;
+    position: relative;
+    z-index:9;
+    bottom: 150px;
+}
