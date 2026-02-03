@@ -1,18 +1,90 @@
+/* Boilerplate */
 * {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-}
-html,body {
-    height: 100%;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#main{
-    height: 100%;
-    width: 100%;
-    background-image: url(https://plus.unsplash.com/premium_photo-1763073253332-e75e796e8925?q=80&w=743&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    /* background: linear-gradient(60deg, lightblue, royalblue); */
-    background-size: cover;
-    background-position: 0% 40%;
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* General styling */
+body {
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 80px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+}
+
+/* Common box */
+.box {
+  width: 120px;
+  height: 120px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STATIC */
+.static {
+  background-color: gray;
+}
+
+/* RELATIVE */
+.relative {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  background-color: steelblue;
+}
+
+/* ABSOLUTE */
+.parent {
+  position: relative;
+  height: 200px;
+  background-color: #f9f9f9;
+}
+
+.absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: crimson;
+}
+
+/* FIXED */
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: green;
+}
+
+/* STICKY */
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: purple;
+  color: white;
+  padding: 10px;
+}
+
+.sticky-section {
+  height: 600px;
+}
+
+.filler {
+  margin-top: 400px;
 }

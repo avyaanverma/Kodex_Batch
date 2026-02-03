@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Frameblox";
+    src: url(./assets/1ZFS7N918ojhhd0nQWdj3jz4w.woff2);
+}
+@font-face {
+    font-family: "cursive";
+    src: url(./assets/KFIAZD4RUMEZIYV6FQ3T3GP5PDBDB6JY.woff2);
+}
+@font-face {
+    font-family: "playfair";
+    src: url(./assets/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#nav{
+    height: 10%;
+    background-color: antiquewhite;
+}

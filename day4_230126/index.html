@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <title>CSS Position Visual Demo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main">
-        
-    </div>
+
+  <h1>CSS Position Property – Visual Demo</h1>
+
+  <!-- STATIC -->
+  <section>
+    <h2>position: static (default)</h2>
+    <div class="box static">STATIC</div>
+  </section>
+
+  <!-- RELATIVE -->
+  <section>
+    <h2>position: relative</h2>
+    <div class="box relative">RELATIVE</div>
+  </section>
+
+  <!-- ABSOLUTE -->
+  <section class="parent">
+    <h2>position: absolute (inside relative parent)</h2>
+    <div class="box absolute">ABSOLUTE</div>
+  </section>
+
+  <!-- FIXED -->
+  <div class="box fixed">FIXED</div>
+
+  <!-- STICKY -->
+  <section class="sticky-section">
+    <h2 class="sticky">STICKY HEADER</h2>
+    <p>Scroll down to see sticky behavior.</p>
+    <p class="filler">Keep scrolling...</p>
+  </section>
+
 </body>
 </html>
