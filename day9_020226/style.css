@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #000;
+}
+
+#main h4{
+     color:white;
+     font-size: 50px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     width:fit-content;
+}
+
+#main #left::after{
+    content: "";
+    width:0% ;
+    display: block;
+    height: 3px;
+    background-color: white;
+    transition: all ease-in 0.3s;
+}
+
+#main #left:hover::after{
+    width: 100%;
+}
+
+#main #center{
+    position: relative;
+}
+#main #center::after{
+    content: "";
+    width:0% ;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 3px;
+    background-color: white;
+    transition: all ease-in 0.3s;
+}
+
+#main #center:hover::after{
+    width: 100%;
+}
+#main #right{
+    position: relative;
+}
+#main #right::after{
+    content: "";
+    width:0% ;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: white;
+    transition: all ease-in 0.3s;
+}
+
+#main #right:hover::after{
+    width: 100%;
+}
+
+#progress{
+    font-size: 40px;
+    padding: 30px 60px;
+    border-radius: 5px;
+    border: 5px solid royalblue;
+    background: transparent;
+    color: royalblue;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#progress::after{
+    content:"";
+    position: absolute;
+    background-color: royalblue;
+    height: 200%;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: all ease-in 0.2s;
+    z-index: -1;
+}
+
+#progress:hover::after{
+    width: 100%;
+}
+
+#progress:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#progress2{
+    font-size: 40px;
+    padding: 30px 60px;
+    border-radius: 5px;
+    border: 5px solid seagreen;
+    background: transparent;
+    color: seagreen;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#progress2::before{
+    content:"";
+    position: absolute;
+    background-color: seagreen;
+    height: 0;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:100% ;
+    z-index: -1;
+    transition: all ease-in 0.5s;
+}
+
+#progress2:hover::before{
+    height: 200%;
+    width: 200%;
+}
+
+#progress2:hover{
+    color: white;
+}

@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url(./HelveticaNeueMedium.otf);
+}
+@font-face {
+    font-family: 'manrope';
+    src: url(./Manrope-VariableFont_wght.woff2);
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    color: white;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+    font-family: manrope;
+    color :rgb(150, 150, 150);
+}
+#main{
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    background: radial-gradient(#33160b, #000000);
+    
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8vw 4.2vw;
+    /* height: 10%; */
+    width: 100%;
+}
+#logo{
+    width: 12vw;
+}
+#logo img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+#nav #center{
+    width: 70vw;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0vw 17vw;
+
+}
+
+#nav #menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    width: 28vw;
+    padding: 0.85vw 1.1vw ;
+    background: linear-gradient(#151010, #110C0C);
+    border-radius: 0.4vmax;
+    box-shadow: inset 0px 1px 1px rgb(108, 108, 108), inset -0px -1px 1px rgb(108, 108, 108), 1px 1px 5px black;
+    /* background-color: blue; */
+    
+}
+
+#nav #profile {
+    align-items: center;
+    justify-content: flex-end;
+    width: 3vw;
+    height:3vw;
+    border: 1px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+#nav #profile img{
+    max-width: 100% ;
+}
+
+#menu h4{
+    font-size: 1vw;
+    font-weight: 500;
+    font-family: manrope;
+    color: #a4a4a4;
+}
+
+.menu-bar{
+    width: 3vw;
+    height: 5vw;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    gap: 1.4vw;
+}
+
+.menu-bar .line{
+    height: 0.3vmax;
+    width: 100%;
+    background-color: white;
+}
+
+@media (max-width: 700px) {
+    #nav #menu{
+        display: none;
+    }
+    .menu-bar{
+        display: flex;
+    }
+    #profile{
+        display: none;
+    }
+}
