@@ -1,0 +1,127 @@
+@font-face {
+    font-family: helvetica-med;
+    src: url(./assets/HelveticaNeueMedium.otf);
+}
+@font-face {
+    font-family: helvetica-light;
+    src: url(./assets/HelveticaNeueLight.otf);
+}
+@font-face {
+    font-family: playfair;
+    src: url(./assets/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: helvetica-med;
+    height: 10%;
+}
+
+#menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    font-family: helvetica-light;
+    padding-left:264px;
+    letter-spacing: 0.5px;
+}
+
+#menu a{
+    font-size: 13.5px;
+}
+
+#logo{
+    text-align: center;
+    width: 23%;
+    font-size: 18px;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+#hero-section { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main #hero-section h1{
+    font-family: playfair;
+    font-weight: 100;
+    letter-spacing: -1px;
+}
+
+#main #hero-section h2{
+    text-align: center;
+    width: 60%;
+    font-family: Helvetica, sans-serif;
+    font-size: 70px;
+}
+
+#hero-section p{
+    color: rgb(172, 171, 171);
+    font-size: 20px;
+    font-family: helvetica-light;
+    text-align: center;
+    font-weight: 100;
+}
+
+
+#poster{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+#poster img {
+    height: 700px;
+    width: 700px;
+    transform: rotate(-10deg);
+    z-index: 5;
+}
+
+#grad{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    background: linear-gradient(rgb(231, 158, 87), rgb(231, 37, 105), rgb(154, 75, 166));
+    z-index: 1;
+    filter: blur(120px);
+}
+
+#white {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    background: white;
+    z-index: 1;
+    filter: blur(120px);
+    top: 600px;
+    z-index: 7;
+}

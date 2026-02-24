@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mixed Advanced JavaScript + DOM Questions</title>
+  </head>
+  <body>
+    <!-- 10 sections – one per question, same order as in prompt -->
+    <div class="section" id="question1">
+      <h2>1. Numbers greater than average</h2>
+      <div id="code-area">
+        const arr = [10,20,30,40,50]; <br/>
+        const avgNo = arr.reduce((a, sum)=> a + sum, 0 ) / arr.length; <br/>
+
+        const greaterThanAvg = arr.filter(num => num > avgNo); <br/>
+        console.log(greaterThanAvg); <br/>
+    </div>
+    <div id="output">
+
+    </div>
+    </div>
+
+    <div class="section" id="question2">
+      <h2>2. Theme switcher (Light / Dark) + localStorage</h2>
+      <div class="placeholder-note">
+        💾 theme saved & restored after refresh<br />
+        (DOM + localStorage)
+      </div>
+    </div>
+
+    <div class="section" id="question3">
+      <h2>3. Double‑click rotation 360°</h2>
+      <div class="placeholder-note">
+        🔄 double‑click → div rotates 360°<br />
+        rotation count shown inside
+      </div>
+    </div>
+
+    <div class="section" id="question4">
+      <h2>4. Custom map (no Array.map)</h2>
+      <div class="placeholder-note">
+        🧭 mimic map() without using .map()<br />
+        then transform an array
+      </div>
+    </div>
+
+    <div class="section" id="question5">
+      <h2>5. Gambling button 1‑10</h2>
+      <div class="placeholder-note">
+        🎲 random 1‑10 → >7 = “You Win!” else “Try Again!”<br />
+        (Math.random + events)
+      </div>
+    </div>
+
+    <div class="section" id="question6">
+      <h2>6. Hoisting: var / let / function declaration</h2>
+      <div class="placeholder-note">
+        🧠 predict + explain output snippet<br />
+        (hoisting knowledge)
+      </div>
+    </div>
+
+    <div class="section" id="question7">
+      <h2>7. Live character counter (textarea)</h2>
+      <div class="placeholder-note">
+        ✍️ count on typing, red warning > 100<br />
+        (DOM events, real‑time)
+      </div>
+    </div>
+
+    <div class="section" id="question8">
+      <h2>8. Product filter (startsWith)</h2>
+      <div class="placeholder-note">
+        🔍 input → show items starting with typed text<br />
+        (filter, startsWith, DOM)
+      </div>
+    </div>
+
+    <div class="section" id="question9">
+      <h2>9. Dynamic card generator</h2>
+      <div class="placeholder-note">
+        🃏 “Add Card” → name, image, delete button<br />
+        (createElement, appendChild, events)
+      </div>
+    </div>
+
+    <div class="section" id="question10">
+      <h2>10. Clone user object (no spread) & update</h2>
+      <div class="placeholder-note">
+        🧬 clone object without spread,<br />
+        change one property, return new object
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

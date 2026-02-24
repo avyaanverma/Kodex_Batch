@@ -1,0 +1,17 @@
+html, body{
+    cursor: none;
+    transition: all 0.2s linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cursor{
+    height: 80px;
+    width: 50px;
+    background-image: url(./assets/Mario_by_Shigehisa_Nakaue-removebg-preview.png);
+    background-position: 10% 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    position: absolute;
+    pointer-events: none;
+}

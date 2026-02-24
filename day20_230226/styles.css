@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+.todo-list{
+    display: flex;
+}
+#todo{
+    border: 2px solid goldenrod;
+    width: 500px;
+    padding: 25px 25px;
+}
+
+.task{
+    height: 200px;
+    width: 450px;
+    background-color: tomato;
+    margin: 10px;
+    position: relative;
+    transition: all 0.3s ease-in;
+    touch-action: none;
+}
+
+.task h1{
+    color:white;
+    text-align: center;
+}
+
+#done{
+    position: relative;
+    background-color: greenyellow;
+    height: 600px;
+    width: 500px;
+    padding: 25px 25px;
+}

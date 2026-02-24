@@ -1,0 +1,290 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/Montserrat--Regular.ttf);
+}
+@font-face {
+    font-family: Guardian;
+    src: url(./assets/fonts/GuardianSansXCond-Bold.otf);
+}
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* navbar */
+nav{
+    background-color: #181818;
+    height: 11%;
+    width: 100%;
+    color:#fffff0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+#logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img{
+    height: 35%;
+    width: auto;
+}
+
+#menu{
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+    padding: 0 13vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+
+}
+
+#menu h1{
+    font-size: 0.9rem;
+    font-family: Montserrat;
+    font-weight: 200;
+    letter-spacing: 1px;
+    position: relative;
+    bottom: 2%;
+}
+
+#menu h1 i{
+    font-size: 1.2rem;
+    position: relative;
+    top: 13%;
+}
+
+#other{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.2rem;
+    margin-right: 2rem;
+
+}
+
+#other div{
+    font-family: Montserrat;
+    font-weight: 900;
+}
+
+#ri-map-pin-2-line {
+    width: 1.2rem;
+    height: 2rem;
+}
+
+/* hero */
+#hero-slider{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#slider-track{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.4s ease;
+
+    flex-shrink: 0;
+    cursor: grab;
+}
+
+#slider-track:active {
+    cursor: grabbing;
+}
+
+#slider-track .slide{
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+
+#slider-track .slide .content{
+    top: 45%;
+    left: 10%;
+    position: absolute;
+    z-index: 10;
+}
+
+#slider-track .slide > .content h1{
+    color: white;
+    font-family: Guardian;
+    font-size:4rem;
+}
+
+#slider-track .slide > .content button{
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    line-height: 1.4pc;
+    font-family: Montserrat;
+    font-weight: 1000;
+    background-color: rgba(66,66,66,.7);
+    backdrop-filter: blur(5px);
+    border: none;
+    padding: 20px 20px;
+    margin-top: 2rem;
+    cursor:pointer;
+}
+
+#slider-track img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.dots{
+    left: 10%;
+    bottom: 20%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.dot{
+    height: 5px;
+    width: 30px;
+    border-radius: 2px;
+    background-color: #494b4a63;
+    z-index: 10;
+}
+
+.dot.active{
+    background-color: #fffff0;
+}
+
+
+
+/* register section */
+
+#register-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./assets/images/register/background-image-new.webp);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    /* border: 5px solid red; */
+}
+
+.register-window{
+    background-color: #000000c9;
+    width: 100%;
+    height: 100%;
+}
+
+.register-track{
+    position: relative;
+    /* border: 5px solid green; */
+    left: 20%;
+    display: flex;
+    transition: transform 1.5s ease;
+}
+
+.register-track .slide{
+    min-width:60%;
+    position: relative;
+    transform: scale(0.6);
+    transition: al  l 0.6s ease;
+    /* border: 5px solid white; */
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+    padding: 20px 0;
+    background-color: #282828;
+    height: 680px;
+}
+
+.register-track .slide #register-img{
+    /* border: 2px solid white; */
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-track .slide img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.register-track .slide #black{
+    height: 30px;
+    width: 120%;
+    background: linear-gradient(black, rgb(46, 46, 46));
+    z-index: 5;
+    filter: blur(8px);
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+}
+
+.register-track .slide.active{
+    opacity: 1;
+    transform: scale(0.8);
+}
+
+#register-section .nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+     background: rgb(38, 38, 38);
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 100%;
+} 
+.prev { left: 25%; }
+.next { right: 25%; }
+
+
+
+.register-track .register-content {
+    width: 95%;
+    border: 1px solid white;
+    height: 7rem;
+}
+.register-track .register-content button{
+    height: 100%;
+    width: 100%;
+    font-family: Montserrat;
+    background: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
+}

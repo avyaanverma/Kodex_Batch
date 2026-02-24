@@ -1,0 +1,3 @@
+connectInstagram();
+connectFaceboo();
+connectTwitter();

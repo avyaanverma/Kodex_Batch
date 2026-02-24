@@ -1,0 +1,100 @@
+/* global reset and smooth scroll between sections */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* each section = exactly 100vh, distinct background, centered content */
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); /* subtle separation */
+}
+
+/* colorful backgrounds – you keep the functionality, we keep the vision */
+.section:nth-child(1) {
+  background: #ffb3ba;
+} /* pastel pink */
+.section:nth-child(2) {
+  background: #c5e0b4;
+} /* soft green */
+.section:nth-child(3) {
+  background: #ffd9b0;
+} /* peach */
+.section:nth-child(4) {
+  background: #b5ead7;
+} /* mint */
+.section:nth-child(5) {
+  background: #d4b8d4;
+} /* lavender */
+.section:nth-child(6) {
+  background: #fbc8b5;
+} /* apricot */
+.section:nth-child(7) {
+  background: #b0d9e8;
+} /* powder blue */
+.section:nth-child(8) {
+  background: #fce598;
+} /* vanilla */
+.section:nth-child(9) {
+  background: #c1e1c1;
+} /* pale sage */
+.section:nth-child(10) {
+  background: #fac8cd;
+} /* blush */
+
+/* preserve readability of headings */
+h2 {
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(3px);
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  border-radius: 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin-bottom: 2rem;
+  border: 1px solid white;
+}
+
+hr {
+  width: 80px;
+  margin: 2rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+#code-area{
+    background-color:rgba(0, 0, 0, 0.05);
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1rem;
+    border-radius: 8px;
+    height: 50vh;
+    width: 80%;
+
+    text-align: left;
+    font-size: 30px;
+}
+
+#output{
+    color:white;
+    background-color: rgba(73, 73, 73, 0.332);
+    width: 80%;
+    height: 80px;
+    padding: 20px 20px;
+}
