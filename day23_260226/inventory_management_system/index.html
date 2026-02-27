@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pharmacy Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Pharmacy Inventory Management</h1>
+    </header>
+
+    <main>
+
+        <!-- Add Medicine Section -->
+        <section id="add-medicine-section">
+            <h2>Add Medicine</h2>
+
+            <form id="medicine-form">
+
+                <input type="text" id="name" placeholder="Medicine Name" required>
+
+                <input type="text" id="manufacturer" placeholder="Manufacturer" required>
+
+                <input type="text" id="batchNumber" placeholder="Batch Number" required>
+
+                <input type="date" id="expiryDate" required>
+
+                <input type="number" id="purchasePrice" placeholder="Purchase Price" required>
+
+                <input type="number" id="mrp" placeholder="MRP" required>
+
+                <input type="number" id="quantity" placeholder="Quantity" required>
+
+                <input type="text" id="branch" placeholder="Branch Name" required>
+
+                <button type="submit">Add Medicine</button>
+
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Search Section -->
+        <section id="search-section">
+            <h2>Search Medicine</h2>
+            <input type="text" id="searchInput" placeholder="Search by name...">
+        </section>
+
+        <hr>
+
+        <!-- Inventory Table -->
+        <!-- Inventory Cards Section -->
+        <section id="inventory-section">
+            <h2>Inventory List</h2>
+
+            <div id="inventoryContainer" class="card-container">
+                <!-- Cards will come from JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

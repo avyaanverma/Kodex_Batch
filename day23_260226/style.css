@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    min-height: 100%;
+    width: 100%;
+    background-color: #000;
+    font-family: Helvetica, sans-serif;
+}
+
+.add-data{
+    margin: 0;
+    width: 100%;
+    background-color: #F8CB45;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-data img{
+    height: 200px;
+}
+
+.add-data input{
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+    font-size: 15px;
+    outline: none;
+}
+
+.add-data button{
+    background-color: #000;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.all-data{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item{
+    background-color: white;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    min-width: 20%;
+}
+
+.item h3{
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.item div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.item div button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: white;
+    font-size: 15px;
+    border: none;
+}
+
+.item div button:nth-child(2){
+    background-color: red;
+}

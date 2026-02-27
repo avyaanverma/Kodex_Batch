@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jsmediatags/dist/jsmediatags.min.js"></script>
+    <title>Music-Player</title>
+</head>
+<audio id="audio" src="./songs/Pehli Dafa.mp3"></audio>
+<body>
+    <div id="main">
+        <div id="music-player">
+            <div id="player">
+                <div id="song">
+                    <div id="song-image">
+                        <i class="ri-poker-hearts-line"></i>
+                        <div id="inner"></div>
+                        <!-- <i class="ri-poker-hearts-fill liked"></i> -->
+                        <img src="./songs/Pehli_Dafa_Atif_Aslam.webp" alt="">
+                    </div>
+                    <div id="song-name">Developer</div>
+                    <div id="song-author">Avyaan Verma</div>
+                </div>
+                <div id="media-controls">
+                    <input type="range" id="progress-bar" value="0" min="0" max="100" step="1">
+
+                    <div id="controls">
+                        <div id="prev"><i class="ri-skip-back-fill"></i></div>
+                        <!-- <div id="pause"><i class="ri-pause-circle-fill"></i></div> -->
+                        <div id="pause"><i class="ri-play-circle-fill"></i></div>
+                        <div id="next"><i class="ri-skip-right-fill"></i></div>
+                    </div>
+
+                    <div id="time-display">
+                        <span id="curr-time">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

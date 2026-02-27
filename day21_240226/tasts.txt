@@ -1,0 +1,5 @@
+Task - 
+
+1. make sth good with querySelectorAll and childNodes
+2. make a sticky navbar with wheel event
+3. make sth good with the combination of querySelectorAll, childNodes, mousemove
