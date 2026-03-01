@@ -10,6 +10,7 @@ html,body {
     background-color: black;
     color: white;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 main{
@@ -41,20 +42,31 @@ nav .links{
 
 .icon{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
 }
+
 
 section{
     padding: 40px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .product-card{
+    width: 350px;
+    height: 500px;
     border-radius: 20px;
     padding: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     background-color: rgb(56, 56, 56);
 }
@@ -62,11 +74,15 @@ section{
 
 .product-card .img{
     height: 250px;
+    width: 100%;
     border-radius: 20px;
 }
 
 .img > img{
+    width: 100%;
     height: 100%;
+    background-position: center;
+    background-size: cover;
     border-radius: 20px;
 }
 
@@ -74,11 +90,13 @@ section{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .btns{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .btns button{
@@ -88,6 +106,8 @@ section{
     color: white;
     border: none;
     outline: none;
+    cursor: pointer;
+
 }
 
 .btns button:nth-child(2){
@@ -95,5 +115,44 @@ section{
 }
 
 
+.cart-screen{
+    top: 6%;
+    right: 0;
+    border-radius: 10px;
+    position: absolute;
+   padding: 40px;
+    min-height: 95%;
+    width: 50%;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    columns: black;
+    
+    transform: translateX(100%);
+    opacity: 0;
 
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    
+}
 
+.cart-screen.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.cart-screen #items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    columns: white;
+}
+
+.cart-screen .bill{
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+    color: white;
+    padding: 20px 20px;
+}
