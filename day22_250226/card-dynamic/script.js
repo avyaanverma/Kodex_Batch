@@ -4,7 +4,7 @@ const data = {
       "id": 1,
       "drink_name": "Classic Cappuccino",
       "theme_color": "#6F4E37",
-      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+      "image": "./assets/images/coffee.png",
       "description": "Rich espresso blended with steamed milk and thick milk foam. Perfect balance of bold and creamy.",
       "sizes": {
         "S": { "cup_size_ml": 180, "actual_price": 120, "discounted_price": 99 },
@@ -16,7 +16,7 @@ const data = {
       "id": 2,
       "drink_name": "Iced Caramel Latte",
       "theme_color": "#C68E17",
-      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735",
+      "image": "./assets/images/mangoshake.png",
       "description": "Chilled espresso with creamy milk and sweet caramel syrup, served over ice.",
       "sizes": {
         "S": { "cup_size_ml": 250, "actual_price": 150, "discounted_price": 129 },
@@ -28,7 +28,7 @@ const data = {
       "id": 3,
       "drink_name": "Strawberry Smoothie",
       "theme_color": "#E63946",
-      "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e",
+      "image": "./assets/images/strawberry.png",
       "description": "Fresh strawberries blended with yogurt and ice for a refreshing fruity boost.",
       "sizes": {
         "S": { "cup_size_ml": 300, "actual_price": 140, "discounted_price": 119 },
@@ -40,7 +40,7 @@ const data = {
       "id": 4,
       "drink_name": "Mint Mojito (Non-Alcoholic)",
       "theme_color": "#2A9D8F",
-      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6c0d",
+      "image": "./assets/images/mojito.png",
       "description": "Refreshing blend of mint leaves, lime juice, sugar syrup, and sparkling soda.",
       "sizes": {
         "S": { "cup_size_ml": 250, "actual_price": 110, "discounted_price": 95 },
@@ -52,7 +52,7 @@ const data = {
       "id": 5,
       "drink_name": "Mango Shake",
       "theme_color": "#FFB703",
-      "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859",
+      "image": "./assets/images/shake.png",
       "description": "Creamy mango pulp blended with chilled milk and a hint of cardamom.",
       "sizes": {
         "S": { "cup_size_ml": 300, "actual_price": 130, "discounted_price": 110 },
@@ -64,7 +64,7 @@ const data = {
       "id": 6,
       "drink_name": "Blueberry Iced Tea",
       "theme_color": "#3A86FF",
-      "image": "https://images.unsplash.com/photo-1510626176961-4b37d4fbad03",
+      "image": "./assets/images/icetea.png",
       "description": "Cold brewed tea infused with blueberry flavor and served chilled with ice cubes.",
       "sizes": {
         "S": { "cup_size_ml": 250, "actual_price": 100, "discounted_price": 85 },
@@ -89,3 +89,67 @@ const drinks = data.products;
 // })
 
 // drinkSection.innerHTML = sum;
+
+
+
+
+
+// adding drinks 
+
+var sum = ''
+drinks.forEach((drink,index)=>{
+  
+  sum += `<div class="drink"  data-index="${index}" style="--theme-color:${drink.theme_color}">
+                <div class="back"></div>
+                <div class="drink-image">
+                    <img src="${drink.image}" alt="">
+                </div>
+                <div class="drink-content">
+                    <h2>${drink.drink_name}<span class="cup-size">(${drink.sizes.S.cup_size_ml}ml)</span></h2>
+                    
+                    <p>${drink.description}</p>
+                    <div class="sizes"> 
+                        Size:
+                        <span class="size active">S</span>
+                        <span class="size">M</span>
+                        <span class="size">L</span>
+                    </div>
+                </div>
+                <div class="buyout">
+                    <span class="discounted-price">$${drink.sizes.S.discounted_price}</span>
+                    <span class="actual-price">$${drink.sizes.S.actual_price}</span>
+
+                    <button class="order">Order Now</button>
+                </div>
+            </div>`
+})
+
+drinkSection.innerHTML = sum;
+
+
+// scope me cards ko kaise select kareh aur logic lagaye taaki globablly sizes na change karne padeh 
+const drinkCards = document.querySelectorAll(".drink");
+
+drinkCards.forEach((card)=>{
+  const sizes = card.querySelectorAll(".size");
+  const discountedPrice = card.querySelector(".discounted-price")
+  const actualPrice = card.querySelector(".actual-price")
+  const cupSize = card.querySelector(".cup-size")
+  
+  const productIndex = card.dataset.index;
+  const product = drinks[productIndex];
+
+  sizes.forEach((size)=>{
+    size.addEventListener("click", ()=>{
+      sizes.forEach((size)=>size.classList.remove("active"));
+      size.classList.add("active");
+      const selectedSize = size.textContent.trim(); // S / M / L
+      const sizeData = product.sizes[selectedSize];
+
+      discountedPrice.textContent = `$${sizeData.discounted_price}`;
+      actualPrice.textContent = `$${sizeData.actual_price}`;
+      cupSize.textContent = `(${sizeData.cup_size_ml}ml)`;
+
+    })
+  })
+})
