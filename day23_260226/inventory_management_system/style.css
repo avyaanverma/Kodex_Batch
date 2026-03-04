@@ -1,3 +1,7 @@
+@font-face {
+    font-family: helvetica;
+    src: url(./fonts/Helvetica.ttf);
+}
 * {
     margin: 0;
     padding:0;
@@ -6,194 +10,228 @@
 html,body {
     height: 100%;
     width: 100%;
+    font-family: helvetica;
 }
 
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: #f4f7f9;
-    padding: 30px;
-    color: #333;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    color: #1b7f5f;
-}
-
-h2 {
-    margin-bottom: 15px;
-    color: #2c3e50;
-}
-
-/* Sections */
-section {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Form */
-#medicine-form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-#medicine-form input {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    transition: 0.3s;
-}
-
-#medicine-form input:focus {
-    border-color: #1b7f5f;
-    outline: none;
-}
-
-#medicine-form button {
-    grid-column: span 2;
-    padding: 10px;
-    background-color: #1b7f5f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#medicine-form button:hover {
-    background-color: #145c45;
-}
-
-/* Search */
-#searchInput {
+#nav{
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-/* Table */
-/* Card Container */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10px;
     gap: 20px;
-    margin-top: 20px;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    background-color: black;
+    color: whitesmoke;
 }
 
-/* Individual Card */
-.inventory-card {
-    background: white;
+#logo{
+    margin-left: 20px;
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+#store-name{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#profile{
+    border-radius: 50%;
+    border: 5px solid white;
+    height: 50px;
+    width: 50px;
+}
+#profile img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+#search-section{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+#search-section .search-bar input{
+    outline: none;
+    border: 1px solid rgba(78, 78, 78, 0.14);
+    padding: 10px 20px;
     border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-    position: relative;
 }
 
-.inventory-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Card Header */
-.card-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1b7f5f;
-    margin-bottom: 10px;
-}
-
-/* Card Info */
-.card-info {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-/* Status Badge */
-.status-badge {
-    padding: 4px 8px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 8px;
-}
-
-.low-stock {
-    background: #ffe5e5;
-    color: red;
-}
-
-.expiring-soon {
-    background: #fff3cd;
-    color: #856404;
-}
-
-.normal-stock {
-    background: #e6f4ea;
-    color: green;
-}
-
-/* Delete Button */
-.delete-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 5px 8px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.delete-btn:hover {
-    background: #c0392b;
-}
-/* Status Colors (JS will add these classes later) */
-.low-stock {
-    color: red;
-    font-weight: bold;
-}
-
-.expiring-soon {
-    color: orange;
-    font-weight: bold;
-}
-
-.normal-stock {
-    color: green;
-    font-weight: bold;
-}
-
-/* Action Buttons */
-.action-btn {
-    padding: 5px 8px;
-    border: none;
+#search-section .search-bar i{
     border-radius: 4px;
-    cursor: pointer;
-}
-
-.delete-btn {
-    background-color: #e74c3c;
+    padding: 5px 5px;
+    background-color: royalblue;
     color: white;
 }
 
-.delete-btn:hover {
-    background-color: #c0392b;
+.add-products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:auto ;
+}
+
+.add-products button{
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+}
+.sort-by select{
+    padding: 10px 100px;
+    color: white;
+    background-color: royalblue;
+    border: none;
+    border-radius: 10px;
+}
+
+/* product-form */
+#medicine-form {
+    border-radius: 10px;
+    padding: 40px 4px;
+    background-color: royalblue;
+    color: white;
+    font-weight: 700;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    
+}
+
+#medicine-form .form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#medicine-form input{
+    border-radius: 4px;
+    padding: 8px 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+
+}
+
+.form-group button{
+    color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px 10px;
+    background-color: black;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.submit-btn{
+    grid-column: span 3;
+}
+
+#medicine-form select{
+    border-radius: 4px;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+/* products */
+#products-section{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+    padding:30px;
+}
+.product{
+    background:white;
+    border-radius:12px;
+    padding:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    display:flex;
+    align-items:center;
+    text-align:center;
+    transition:0.25s;
+    gap: 20px;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+ img{
+    width:71px;
+    height:60px;
+    object-fit:cover;
+    margin-bottom:10px;
+    border-radius: 50%;
+}
+
+.image{
+    width: 71px;
+}
+ .name{
+    font-weight:700;
+    font-size:18px;
+    width: 200px;
+}
+
+ .brand{
+    font-size:18px;
+    width: 200px;
+}
+
+.price{
+    width: 200px;
+    margin-top:8px;
+}
+    
+.cost-price{
+    width: 200px;
+    margin-right:5px;
+}
+
+.category{
+    width: 200px;
+}
+
+.selling-price{
+    width: 200px;
+}
+
+.in-stock{
+    width: 200px;
+    font-size:18px;
+}
+
+.labels-card{
+    background:white;
+    border-radius:12px;
+    padding:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    display:flex;
+    align-items:center;
+    text-align:center;
+    transition:0.25s;
+    gap: 20px;
 }

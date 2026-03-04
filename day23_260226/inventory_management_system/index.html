@@ -2,67 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pharmacy Inventory System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Medix-Inventory-Management-System</title>
 </head>
 <body>
+    <div id="nav">
+        <div id="logo">🏥AryuVedaX</div>
+        <div id="store-name">Aryuvedic Center</div>
+        <div id="profile">
+            <img src="https://imgs.search.brave.com/gI1LMTLDwf4Ea16M4trLCUCHEj8sGFY2nbEIFGFDXEA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvNTAwcC8x/My8xNy9tYWxlLWF2/YXRhci1wcm9maWxl/LXBpY3R1cmUtZ29s/ZC1tZW1iZXItc2ls/aG91ZXR0ZS12ZWN0/b3ItNTM1MTMxNy5q/cGc" alt="">
+        </div>
+    </div>
 
-    <header>
-        <h1>Pharmacy Inventory Management</h1>
-    </header>
+    <div id="search-section">
+        <div class="search-bar">
+            <input type="text" placeholder="Add Product Name....">
+            <i class="ri-search-line"></i>
+        </div>
+        <div class="sort-by">
+            <select name="" id=""></select>
+        </div>
 
-    <main>
+        <div class="add-products">
+            <button><i class="ri-add-large-line"></i> Add a product</button>
+            <h5>Or scan a barcode</h5>
+        </div>
+    </div>
+    <form action="" id="medicine-form">
 
-        <!-- Add Medicine Section -->
-        <section id="add-medicine-section">
-            <h2>Add Medicine</h2>
+        <div class="form-group">
+            <label>Medicine Name</label>
+            <input type="text" name="name">
+        </div>
 
-            <form id="medicine-form">
+        <div class="form-group">
+            <label>Brand</label>
+            <input type="text" name="brand">
+        </div>
 
-                <input type="text" id="name" placeholder="Medicine Name" required>
+        <div class="form-group">
+            <label>Category</label>
+            <select name="category">
+                <option>Pain Relief</option>
+                <option>Antibiotic</option>
+                <option>Allergy</option>
+                <option>Diabetes</option>
+                <option>Acidity</option>
+            </select>
+        </div>
 
-                <input type="text" id="manufacturer" placeholder="Manufacturer" required>
+        <div class="form-group">
+            <label>Dosage</label>
+            <input type="text" name="dosage" placeholder="500mg Tablet">
+        </div>
 
-                <input type="text" id="batchNumber" placeholder="Batch Number" required>
+        <div class="form-group">
+            <label>Cost Price</label>
+            <input type="number" name="cost_price">
+        </div>
 
-                <input type="date" id="expiryDate" required>
+        <div class="form-group">
+            <label>Selling Price</label>
+            <input type="number" name="selling_price">
+        </div>
 
-                <input type="number" id="purchasePrice" placeholder="Purchase Price" required>
+        <div class="form-group">
+            <label>Stock Quantity</label>
+            <input type="number" name="stock_quantity">
+        </div>
 
-                <input type="number" id="mrp" placeholder="MRP" required>
+        <div class="form-group">
+            <label>Expiry Date</label>
+            <input type="date" name="expiry_date">
+        </div>
 
-                <input type="number" id="quantity" placeholder="Quantity" required>
+        <div class="form-group">
+            <label>Image Path</label>
+            <input type="text" name="image" placeholder="./assets/medicines/crocin.jpg">
+        </div>
 
-                <input type="text" id="branch" placeholder="Branch Name" required>
+        <div class="form-group">
+            <label>In Stock</label>
+            <select name="in_stock">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
 
-                <button type="submit">Add Medicine</button>
+        <div class="form-group submit-btn">
+            <button type="submit">Add Medicine</button>
+        </div>
 
-            </form>
-        </section>
+    </form>
+    <div id="product-section">
+        <div class="labels-card">
+            <div class="image"></div>
+            <div class="name">Name</div>
+            <div class="brand">Brand</div>
+            <div class="category">Category</div>
+            <div class="dosage">Dosage</div>
+            <div class="in-stock">Stock</div>
+            <div class="cost-price">Cost Price</div>
+            <div class="selling-price">Selling Price</div>
+        </div>
+        <div class="product">
+            <img src="./assets/medicines/pantoprazole.jpg" alt="">
+            <h1 class="name">Pantoprazole</h1>
+            <div class="brand">Pantoacid</div>
+            <div class="category">Acidity</div>
+            <div class="dosage">40mg Tablet</div>
+            <div class="in-stock">40</div>
+            <div class="cost-price">$25</div>
+            <div class="selling-price">$40</div>
+            
+        </div>
+        <div class="product">
+            <img src="./assets/medicines/amoxicillin.jpg" alt="">
+            <h1 class="name">Amoxicillin</h1>
+            <div class="brand">Sun Pharma</div>
+            <div class="category">Antibiotic</div>
+            <div class="dosage">250mg Capsule</div>
+            <div class="in-stock">45</div>
+            <div class="cost-price">$45</div>
+            <div class="selling-price">$60</div>
+            
+        </div>
+    </div>
 
-        <hr>
-
-        <!-- Search Section -->
-        <section id="search-section">
-            <h2>Search Medicine</h2>
-            <input type="text" id="searchInput" placeholder="Search by name...">
-        </section>
-
-        <hr>
-
-        <!-- Inventory Table -->
-        <!-- Inventory Cards Section -->
-        <section id="inventory-section">
-            <h2>Inventory List</h2>
-
-            <div id="inventoryContainer" class="card-container">
-                <!-- Cards will come from JavaScript -->
-            </div>
-
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
