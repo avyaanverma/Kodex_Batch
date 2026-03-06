@@ -80,12 +80,13 @@ const inventory = {
   ]
 }
 
-const form = document.querySelector("#medicine-form");
-const inventoryContainer = document.querySelector("#inventoryContainer");
+// form submit karke details lena 
 
 
-form.addEventListener("submit", (e)=>{
-  e.preventDefault();
-})
+// form se data update karna 
 
-inventoryContainer.addEventListener
+
+// update aur edit ka feature hona 
+
+
+// 

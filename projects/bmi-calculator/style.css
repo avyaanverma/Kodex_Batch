@@ -1,0 +1,160 @@
+@font-face {
+    font-family: helvetica;
+    src: url(./fonts/Helvetica.ttf);
+}
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: helvetica;
+
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#box{
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 18px 30px;
+    width: 90%;
+    max-width: 600px;
+    min-height: 400px;
+}
+#calculator-form{
+    color: #111c43;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    font-weight: 800;
+    
+}
+
+#calculator-form h1 { 
+    color: #111c43;
+    margin-bottom: 20px;
+    grid-column: span 2;
+}
+#calculator-form label { 
+    color: black;
+    opacity: 0.5;
+    font-size: 0.7rem;
+}
+
+
+#calculator-form div input{
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    padding: 2px 0px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    border-bottom: 1.4px solid rgba(69, 69, 69, 0.207);
+    width: 100%;
+}
+#calculator-form div select{
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    padding: 2px 0px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    border-bottom: 1.4px solid rgba(69, 69, 69, 0.207);
+    width: 100%;
+
+}
+
+
+#calculator-form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#submit-btn{
+    grid-column: span 2;
+    background-color: #00885a;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+}
+
+
+#result{
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#result #bmi-no{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+#result #status{
+    border-radius: 19px;
+    padding: 10px 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+
+#result #risk{
+    font-size: 1rem;
+    color: black;
+    opacity: 0.5;
+    font-weight: 700;
+}
+.status-under{
+    background-color:#e3f2fd;
+    color:#1565c0;
+}
+
+.status-normal{
+    background-color:#e8f5e9;
+    color:#2e7d32;
+}
+
+.status-over{
+    background-color:#fff3e0;
+    color:#ef6c00;
+}
+
+.status-obese{
+    background-color:#ffebee;
+    color:#c62828;
+}
+
+@media (max-width: 680px){
+    #calculator-form{
+        grid-template-columns: 1fr;
+    }
+
+    #calculator-form h1{
+        grid-column: span 1;
+    }
+
+    #submit-btn{
+        grid-column: span 1;
+    }
+}
